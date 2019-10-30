@@ -31,6 +31,6 @@ Film is an expression of feelings, time and motion preserved at a time. Film is 
 At first prototype this web app,then use HTML, CSS, Javascript for forntend and Node.js use for backend.I also call a free api for online videos.using javascript for call the api and request client to server and also use for contact form. Because contact form need validatiton.
 
 December 2nd week backend will be finished
-For Live stream I will use node.js for backend,and all blog's data save in mongodb database.using http client call all data from mongodb and show this data in website. Only the website admin create,update,delete(CRUD Operation) this blog. 
+For Live stream I will use node.js for backend,and all video's data save in mongodb database.using http client call all data from mongodb and show this data in website. Only the website admin create,update,delete(CRUD Operation) this video. 
 
 
