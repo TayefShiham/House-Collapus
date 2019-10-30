@@ -28,12 +28,23 @@ Film is an expression of feelings, time and motion preserved at a time. Film is 
 **5. Book theatre Tickets for shows.**
 
 ## Weekly Plan for project (Week 8-16)
-#Week 8 : At first prototype this web app.
-#Week 9 : then use HTML, CSS, Javascript for frontend and Node.js use for backend.
-#Week 10 : call a free api for online videos.using javascript for call the api and request client to server and also use for contact form. Because contact form need validatiton.
-#Week 11 : For Live stream I will use node.js for backend,and all video's data save in mongodb database.
-#Week 12 : using http client call all data from mongodb and show this data in website. Only the website admin create,update,delete(CRUD Operation) this video. 
-#Week 12-15 : Plans under construction.
-#Week 16 : Final Release.
+
+#### Week 8 : At first prototype this web app.
+
+#### Week 9 : then use HTML, CSS, Javascript for frontend.
+
+#### Week 10 : some major modify in frontend.
+
+#### Week 11 : optimize frontend.
+
+#### Week 12 : call a video api to show the video
+
+#### Week 13 : install nodejs and add some module.
+
+#### Week 14 : create a database in mongodb.
+
+#### week 15 : establish connection with nodejs to database.
+
+#### week 16 : Final Release
 
 
