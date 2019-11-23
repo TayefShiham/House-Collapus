@@ -1,0 +1,37 @@
+{
+  "name": "House-Collapus",
+  "version": "1.0.0",
+  "description": "Film is an expression of feelings, time and motion preserved at a time. Film is also culture. This film and media is a sector of entertainment which is loved by all. House Collapus is such a website where you can get all your films and movies online and at the same time you can download, stream online comment and share your views via online radio at a time. House Collapus has a vision to connect people more fast and easily.",
+  "main": "app.js",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "connect-flash": "^0.1.1",
+    "dotenv": "^8.2.0",
+    "ejs": "^2.7.4",
+    "express": "^4.17.1",
+    "express-ejs-layouts": "^2.5.0",
+    "express-session": "^1.17.0",
+    "mongodb": "^3.3.4",
+    "mongoose": "^5.7.12",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.1"
+  },
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TayefShiham/House-Collapus.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TayefShiham/House-Collapus/issues"
+  },
+  "homepage": "https://github.com/TayefShiham/House-Collapus#readme"
+}
