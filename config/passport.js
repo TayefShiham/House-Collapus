@@ -1,3 +1,4 @@
+//jshint esversion:8
 const LocalStrategy = require('passport-local').Strategy;
 const bcrypt = require('bcryptjs');
 

@@ -3,6 +3,20 @@
 <head>
 	<meta charset="UTF-8">
 	<title>About - House Collapus</title>
+	<link rel="icon" type="image/png" href="images/icons/favicon.ico" />
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="css/util.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
 	<link rel="stylesheet" href="css/style.css" type="text/css">
 </head>
 <body>
@@ -10,27 +24,33 @@
 		<div class="header">
 			<ul>
 				<li>
-					<a href="index.html">home</a>
+					<a href="/">home</a>
 				</li>
 				<li class="selected">
-					<a href="about.html">about</a>
+					<a href="/about">about</a>
 				</li>
 				<li>
-					<a href="blog.html">blog</a>
+					<a href="/blog">blog</a>
 				</li>
 				<li>
-					<a href="shows.html">shows</a>
+					<a href="/shows">shows</a>
+				</li>
+				<li>
+					<a href="/users/register">Registration</a>
+				</li>
+				<li>
+					<a href="/users/login">Login</a>
 				</li>
 			</ul>
-			<form action="index.html">
-				<input type="text" name="email" id="email" value="Enter e-mail address">
-				<input type="submit" name="submit" id="submit" value="">
-			</form>
+			
 		</div>
 	</div>
 	<div id="body">
 		<div class="content">
-			<a href="#"><img src="images/johannedoe.jpg" alt=""></a> <b>The film industry or motion picture industry comprises the technological and commercial institutions of filmmaking, i.e., film production companies, film studios, cinematography, film production, screenwriting, pre-production, post production, film festivals, distribution; and actors, film directors and other film crew personnel.			</p>
+			<div class="login100-pic js-tilt" data-tilt>
+				<img src="images/logo.png" alt="IMG" width="100%" height="20%">
+			</div>
+			 <h2>House Collapus The film industry or motion picture industry comprises the technological and commercial institutions of filmmaking, i.e., film production companies, film studios, cinematography, film production, screenwriting, pre-production, post production, film festivals, distribution; and actors, film directors and other film crew personnel.			</h2>
 			
 		</div>
 		<div class="sidebar">
@@ -44,13 +64,13 @@
 						<a href="https://www.linkedin.com/">Professional Cinematographer&nbsp;&nbsp;-&nbsp;&nbsp;<b>Apply Now!!</b></a>
 					</li>
 					<li>
-						<a href="shows.html">Event Management&nbsp;&nbsp;-&nbsp;&nbsp;<b>Leguna Headquarters</b></a>
+						<a href="/shows">Event Management&nbsp;&nbsp;-&nbsp;&nbsp;<b>Leguna Headquarters</b></a>
 					</li>
 					<li>
-						<a href="shows.html">&nbsp;&nbsp;&nbsp;&nbsp;<b>PROFESSIONAL PHOTOGRAPHER</b></a>
+						<a href="/shows">&nbsp;&nbsp;&nbsp;&nbsp;<b>PROFESSIONAL PHOTOGRAPHER</b></a>
 					</li>
 					<li>
-						<a href="shows.html">Movie Making Tutorials&nbsp;&nbsp;-&nbsp;&nbsp;<b>Join Online Course</b></a>
+						<a href="/shows">Movie Making Tutorials&nbsp;&nbsp;-&nbsp;&nbsp;<b>Join Online Course</b></a>
 					</li>
 				</ul>
 			</div>
@@ -68,8 +88,23 @@
 	</div>
 	<div id="footer">
 		<p>
-			&copy;Copyright 2019. <a href="index.html">House Collapus</a> all rights reserved
+			&copy;Copyright 2019. <a href="/">House Collapus</a> all rights reserved
 		</p>
 	</div>
+	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+	<!--===============================================================================================-->
+	<script src="vendor/bootstrap/js/popper.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+	<!--===============================================================================================-->
+	<script src="vendor/select2/select2.min.js"></script>
+	<!--===============================================================================================-->
+	<script src="vendor/tilt/tilt.jquery.min.js"></script>
+	<script>
+		$('.js-tilt').tilt({
+			scale: 1.1
+		})
+	</script>
+	<!--===============================================================================================-->
+	<script src="js/main.js"></script>
 </body>
 </html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Login V1</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--===============================================================================================-->
+    <link rel="icon" type="image/png" href="images/icons/favicon.ico" />
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="css/util.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <!--===============================================================================================-->
+</head>
+
+<body>
+    <div id="header">
+        <div class="header">
+            <ul>
+                <li>
+                    <a href="/">home</a>
+                </li>
+                <li>
+                    <a href="/about">about</a>
+                </li>
+                <li>
+                    <a href="/blog">blog</a>
+                </li>
+                <li>
+                    <a href="/shows">shows</a>
+                </li>
+                <li>
+                    <a href="/users/logout">Logout</a>
+                </li>
+                <li class="selected">
+                    <a href="/edit" style="float: left;"> Edit </a>
+                </li>
+                <li>
+                    <a href="/dashboard" style="float: left;"> Go back to user </a>
+                </li>
+                <li>
+                    <form action="/delete" method="post">
+                        <input type="text" name="id" value="<%= user._id %>" hidden>
+                        <button type="submit"><a> Delete Account</a>
+                        </button>
+                    </form>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+    <div class="bg-image"></div>
+    <!-- <div class="container-login100"> -->
+    <div class="bg-text">
+        <div style="margin: 1% 24%;">
+            <form action="/edit" method="POST">
+                <div class="form-row">
+                    <h3>Change Credentials</h3>
+                </div>
+                <div class="form-row">
+                    <h3>Current Name: <span style="color:red"><%= user.name %></span></h3>
+                </div>
+                <div class="form-row">
+                    <h3>Current Email: <span style="color:red"><%= user.email %></span></h3>
+                </div>
+                <input type="text" name="name" class="form-control" id="name" required placeholder="Edit Your Name">
+                <input type="email" name="email" class="form-control" id="email" required placeholder="Edit Your Email">
+                <input type="text" name="id" id="id" value="<%= user._id %>" hidden>
+                <button type="submit" class="btn btn-primary form-control"> Save </button>
+            </form>
+        </div>
+    </div>
+    </div>
+
+    <div id="footer">
+        <p>
+            &copy;Copyright 2019. <a href="/">House Collapus</a> all rights reserved
+        </p>
+    </div>
+
+
+    <!--===============================================================================================-->
+    <script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="vendor/bootstrap/js/popper.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="vendor/select2/select2.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="vendor/tilt/tilt.jquery.min.js"></script>
+    <script>
+        $('.js-tilt').tilt({
+            scale: 1.1
+        })
+    </script>
+    <!--===============================================================================================-->
+    <script src="js/main.js"></script>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+
+</html>

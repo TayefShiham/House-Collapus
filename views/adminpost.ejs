@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Login V1</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--===============================================================================================-->
+    <link rel="icon" type="image/png" href="images/icons/favicon.ico" />
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="css/util.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <!--===============================================================================================-->
+</head>
+
+<body>
+    <div id="header">
+        <div class="header">
+            <ul>
+                <li>
+                    <a href="/">home</a>
+                </li>
+                <li>
+                    <a href="/about">about</a>
+                </li>
+                <li>
+                    <a href="/blog">blog</a>
+                </li>
+                <li>
+                    <a href="/shows">shows</a>
+                </li>
+                <li class="selected">
+                    <a href="/users/logout">Logout</a>
+                </li>
+                <li>
+                    <a href="/setting">Settings</a>
+                </li>
+                <li class="selected">
+                    <a href="/users/adminpost">Post your Blog</a>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+    <div class="bg-image"></div>
+    <!-- <div class="container-login100"> -->
+    <div class="bg-text">
+        <div style="margin:0% 24%;">
+            <%-include("./partials/messages")-%>
+            <h1 style="color:#f2427f;text-align: left;padding-bottom: 20px;">Post Your Valuable Blog Here</h1>
+            <form action="/users/adminpost" method="post">
+                <div class="form-row">
+                    <input type="text" id="blogTitle" name="blogTitle" class="form-control" placeholder="Blog Title"
+                        value="<%= typeof blogTitle != 'undefined' ? blogTitle : '' %>" />
+                </div>
+                <div class="form-row">
+                    <textarea name="blog" id="blog" cols="30" class="form-control" rows="10"
+                        placeholder="Write Your Blog Here"
+                        value="<%= typeof blog != 'undefined' ? blog : '' %>"></textarea>
+                </div>
+                <div class="form-row">
+                    <button type="submit" class="btn btn-outline-primary"
+                        style="padding-left: 60px;padding-right: 60px;"> Post </button>
+                    <a href="/dashboard" class="btn btn-outline-primary">Go Back To Your Account</a>
+                </div>
+            </form>
+        </div>
+    </div>
+    </div>
+
+    <div id="footer">
+        <p>
+            &copy;Copyright 2019. <a href="/">House Collapus</a> all rights reserved
+        </p>
+    </div>
+
+
+    <!--===============================================================================================-->
+    <script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="vendor/bootstrap/js/popper.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="vendor/select2/select2.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="vendor/tilt/tilt.jquery.min.js"></script>
+    <script>
+        $('.js-tilt').tilt({
+            scale: 1.1
+        })
+    </script>
+    <!--===============================================================================================-->
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>

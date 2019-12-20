@@ -13,6 +13,7 @@ const PromiseProvider = require('./promise_provider');
 const applyPlugins = require('./helpers/schema/applyPlugins');
 const get = require('./helpers/get');
 const mongodb = require('mongodb');
+const pkg = require('../package.json');
 const utils = require('./utils');
 
 const parseConnectionString = require('mongodb/lib/core').parseConnectionString;
@@ -186,6 +187,27 @@ Connection.prototype.collections;
  */
 
 Connection.prototype.name;
+
+/**
+ * A [POJO](https://masteringjs.io/tutorials/fundamentals/pojo) containing
+ * a map from model names to models. Contains all models that have been
+ * added to this connection using [`Connection#model()`](/docs/api/connection.html#connection_Connection-model).
+ *
+ * ####Example
+ *
+ *     const conn = mongoose.createConnection();
+ *     const Test = conn.model('Test', mongoose.Schema({ name: String }));
+ *
+ *     Object.keys(conn.models).length; // 1
+ *     conn.models.Test === Test; // true
+ *
+ * @property models
+ * @memberOf Connection
+ * @instance
+ * @api public
+ */
+
+Connection.prototype.models;
 
 /**
  * The plugins that will be applied to all models created on this connection.
@@ -599,6 +621,12 @@ Connection.prototype.openUri = function(uri, options, callback) {
       options.useUnifiedTopology = false;
     }
   }
+  if (!utils.hasUserDefinedProperty(options, 'driverInfo')) {
+    options.driverInfo = {
+      name: 'Mongoose',
+      version: pkg.version
+    };
+  }
 
   const parsePromise = new Promise((resolve, reject) => {
     parseConnectionString(uri, options, (err, parsed) => {
@@ -649,17 +677,24 @@ Connection.prototype.openUri = function(uri, options, callback) {
       if (options.useUnifiedTopology) {
         if (type === 'Single') {
           const server = Array.from(db.s.topology.s.servers.values())[0];
-          server.s.pool.on('close', () => {
-            _this.readyState = STATES.disconnected;
-          });
+
           server.s.topology.on('serverHeartbeatSucceeded', () => {
             _handleReconnect();
           });
           server.s.pool.on('reconnect', () => {
             _handleReconnect();
           });
-          server.s.pool.on('timeout', () => {
-            _this.emit('timeout');
+          client.on('serverDescriptionChanged', ev => {
+            const newDescription = ev.newDescription;
+            if (newDescription.type === 'Standalone') {
+              _handleReconnect();
+            } else if (newDescription.error != null &&
+              newDescription.error.name === 'MongoNetworkError' &&
+              newDescription.error.message.endsWith('timed out')) {
+              _this.emit('timeout');
+            } else {
+              _this.readyState = STATES.disconnected;
+            }
           });
         } else if (type.startsWith('ReplicaSet')) {
           db.on('close', function() {

@@ -1,60 +1,147 @@
-<div class="row mt-5">
-  <div class="col-md-6 m-auto">
-    <div class="card card-body">
-      <h1 class="text-center mb-3">
-        <i class="fas fa-user-plus"></i> Register
-      </h1>
-      <% include ./partials/messages %>
-      <form action="/users/register" method="POST">
-        <div class="form-group">
-          <label for="name">Name</label>
-          <input
-            type="name"
-            id="name"
-            name="name"
-            class="form-control"
-            placeholder="Enter Name"
-            value="<%= typeof name != 'undefined' ? name : '' %>"
-          />
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Login V1</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--===============================================================================================-->
+    <link rel="icon" type="image/png" href="images/icons/favicon.ico" />
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="css/util.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <!--===============================================================================================-->
+</head>
+
+<body>
+    <div id="header">
+        <div class="header">
+            <ul>
+                <li >
+                    <a href="/">home</a>
+                </li>
+                <li>
+                    <a href="/about">about</a>
+                </li>
+                <li>
+                    <a href="/blog">blog</a>
+                </li>
+                <li>
+                    <a href="/shows">shows</a>
+                </li>
+                <li class="selected">
+                    <a href="/users/register">Registration</a>
+                </li>
+                <li>
+                    <a href="/users/login">Login</a>
+                </li>
+            </ul>
+
         </div>
-        <div class="form-group">
-          <label for="email">Email</label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            class="form-control"
-            placeholder="Enter Email"
-            value="<%= typeof email != 'undefined' ? email : '' %>"
-          />
-        </div>
-        <div class="form-group">
-          <label for="password">Password</label>
-          <input
-            type="password"
-            id="password"
-            name="password"
-            class="form-control"
-            placeholder="Create Password"
-            value="<%= typeof password != 'undefined' ? password : '' %>"
-          />
-        </div>
-        <div class="form-group">
-          <label for="password2">Confirm Password</label>
-          <input
-            type="password"
-            id="password2"
-            name="password2"
-            class="form-control"
-            placeholder="Confirm Password"
-            value="<%= typeof password2 != 'undefined' ? password2 : '' %>"
-          />
-        </div>
-        <button type="submit" class="btn btn-primary btn-block">
-          Register
-        </button>
-      </form>
-      <p class="lead mt-4">Have An Account? <a href="/users/login">Login</a></p>
     </div>
-  </div>
+    <div  class="bg-image"></div>
+        <!-- <div class="container-login100"> -->
+        <div class="bg-text">
+            <div class="wrap-login100" style="background: transparent; ">
+                <div class="login100-pic js-tilt" data-tilt>
+                    <img src="images/logo.png" alt="IMG">
+                </div>
+
+                <form class="login100-form validate-form" method="POST" action="/users/register">
+                    <span class="login100-form-title" style="color: red;"><% include ./partials/messages %></span>
+                    <span class="login100-form-title" style="font-size: 26px;color:white">
+                        Member Registration
+                    </span>
+                    <div class="wrap-input100 validate-input" data-validate="Valid email is required: ex@abc.xyz">
+                        <input class="input100" type="text" name="name" placeholder="User Name"
+                            value="<%= typeof name != 'undefined' ? name : '' %>" required>
+                        <span class="focus-input100"></span>
+                        <span class="symbol-input100">
+                            <i class="fa fa-user" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <div class="wrap-input100 validate-input" data-validate="Valid email is required: ex@abc.xyz">
+                        <input class="input100" type="email" name="email" placeholder="Email"
+                            value="<%= typeof email != 'undefined' ? email : '' %>" required>
+                        <span class="focus-input100"></span>
+                        <span class="symbol-input100">
+                            <i class="fa fa-envelope" aria-hidden="true"></i>
+                        </span>
+                    </div>
+
+                    <div class="wrap-input100 validate-input" data-validate="Password is required">
+                        <input class="input100" type="password" name="password" placeholder="Create Password"
+                            value="<%= typeof password != 'undefined' ? password : '' %>" required>
+                        <span class="focus-input100"></span>
+                        <span class="symbol-input100">
+                            <i class="fa fa-lock" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <div class="wrap-input100 validate-input" data-validate="Password is required">
+                        <input class="input100" type="password" name="password2" placeholder="Confirm Password"
+                            value="<%= typeof password != 'undefined' ? password : '' %>" required>
+                        <span class="focus-input100"></span>
+                        <span class="symbol-input100">
+                            <i class="fa fa-lock" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="container-login100-form-btn">
+                                <button class="login100-form-btn" type="submit">
+                                    Register
+                                </button>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="container-login100-form-btn">
+                                <button class="login100-form-btn" type="button"><a href="/users/login"
+                                        style="text-decoration: none; color: white;font-weight: 900;">Login If Registered</a>
+
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+<div id="footer">
+    <p>
+        &copy;Copyright 2019. <a href="/">House Collapus</a> all rights reserved
+    </p>
 </div>
+
+
+    <!--===============================================================================================-->
+    <script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="vendor/bootstrap/js/popper.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="vendor/select2/select2.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="vendor/tilt/tilt.jquery.min.js"></script>
+    <script>
+        $('.js-tilt').tilt({
+            scale: 1.1
+        })
+    </script>
+    <!--===============================================================================================-->
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>

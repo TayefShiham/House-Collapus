@@ -6,37 +6,45 @@
 	<link rel="stylesheet" href="css/style.css" type="text/css">
 </head>
 <body>
-	<div id="header">
+	<div id="header" class="homeNav">
 		<div class="header">
 			<ul>
 				<li class="selected">
-					<a href="index.html">home</a>
+					<a href="/">home</a>
 				</li>
 				<li>
-					<a href="about.html">about</a>
+					<a href="/about">about</a>
 				</li>
 				<li>
-					<a href="blog.html">blog</a>
+					<a href="/blog">blog</a>
 				</li>
 				<li>
-					<a href="shows.html">shows</a>
+					<a href="/shows">shows</a>
+				</li>
+				<li>
+					<a href="/users/register">Registration</a>
+				</li>
+				<li>
+					<a href="/users/login">Login</a>
 				</li>
 			</ul>
-			<form action="index.html">
-				<input type="text" name="email" id="email" value="Enter e-mail address">
-				<input type="submit" name="submit" id="submit" value="">
-			</form>
+			
 	</div>
-	<div id="body">
-		<div class="content">
+	</div>
+	<video autoplay muted loop src="./trailer3.mp4" style="z-index: 0;background: transparent;min-height:1173px; margin-top:-9%;" type="video/mp4"
+		width="100%" controls></video>
+	<div id="body" style="min-height: 0px;">
+		
+		<div class="content" id="content">
 			<a href="https://www.youku.com/"><img src="images/video.jpg" alt=""></a>
 
 			<p>
 			Other than the story itself, one part of the film which stood out to the audiences, was the songs of the film. Ghuddi gave us the profound melodies of Happy and Lucky Akhand. Songs such as "ghum ghum ghum, chokhe dey chum" still mesmerises us to this day.	</p>
 			<p>
 				Shahnaz Rahmatullah was awarded the national award as Best Singer for this song. Another song from Ghuddi . The scene of attempting to light the cigarette, fabulous, isn't it? Keep your eyes on the article section to read more... 	</p>
+			
 		</div>
-		<div class="sidebar">
+		<div class="sidebar" id="sidebar">
 			<div>
 				<h3>shows</h3>
 				<ul>
@@ -59,7 +67,7 @@
 			</div>
 			<div class="album">
 				<h3>PHOTO GALLERY</h3>
-				<a href="#"><img src="images/album.jpg" alt=""></a> <span>HOUSE COLLAPUS GALLERY</span>
+				<a href="/shows"><img src="images/album.jpg" alt=""></a> <span>HOUSE COLLAPUS GALLERY</span>
 			</div>
 			<div class="connect">
 				<h3>social</h3>
@@ -69,9 +77,9 @@
 			</div>
 		</div>
 	</div>
-	<div id="footer">
+	<div id="footer" class="footer">
 		<p>
-			&copy;Copyright 2019. <a href="index.html">House Collapus</a> all rights reserved
+			&copy;Copyright 2019. <a href="/">House Collapus</a> all rights reserved
 		</p>
 	</div>
 </body>

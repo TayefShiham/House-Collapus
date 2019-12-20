@@ -6,26 +6,29 @@
 	<link rel="stylesheet" href="css/style.css" type="text/css">
 </head>
 <body>
-	<div id="header">
-		<div class="header">
+	<div id="header" style="width: 987px !important;">
+		<div class="header" style="margin: 5% -1%;padding:0px 0px;">
 			<ul>
 				<li>
-					<a href="index.html">home</a>
+					<a href="/">home</a>
 				</li>
 				<li>
-					<a href="about.html">about</a>
+					<a href="/">about</a>
 				</li>
 				<li class="selected">
-					<a href="blog.html">blog</a>
+					<a href="/blog">blog</a>
 				</li>
 				<li>
-					<a href="shows.html">shows</a>
+					<a href="/shows">shows</a>
+				</li>
+				<li>
+					<a href="/users/register">Registration</a>
+				</li>
+				<li>
+					<a href="/users/login">Login</a>
 				</li>
 			</ul>
-			<form action="index.html">
-				<input type="text" name="email" id="email" value="Enter e-mail address">
-				<input type="submit" name="submit" id="submit" value="">
-			</form>
+			
 		</div>
 		<div class="body">
 		</div>
@@ -36,11 +39,7 @@
 		<div class="content">
 			<h2>blog</h2>
 			<div>
-				<h3>Film Industry Bangladesh</h3>
-				<a href="#"><img src="images/johannedoe2.jpg" alt=""></a>
-				<p>
-					The cinema of Bangladesh is the Bengali language film industry based in Dhaka, Bangladesh. It has often been a significant film industry since the early 1970s and is frequently referred to as "Dhallywood" (Bengali: ঢালিউড), which is a portmanteau of the words Dhaka and Hollywood.				</p>
-				<a href="#" class="more">read more</a>
+				<h1><%= %></h1>
 			</div>
 			<div class="paging">
 				<ul>
@@ -52,19 +51,19 @@
 				<h3>VIDEO DOWNLOAD</h3>
 				<ul>
 					<li>
-						<a href="shows.html">July 12, 2016&nbsp;&nbsp;-&nbsp;&nbsp;<b>31st Show, Bangladesh 2015</b></a>
+						<a href="/shows">July 12, 2016&nbsp;&nbsp;-&nbsp;&nbsp;<b>31st Show, Bangladesh 2015</b></a>
 					</li>
 					<li>
-						<a href="shows.html">February 01, 2017&nbsp;&nbsp;-&nbsp;&nbsp;<b>Porno Bilap, Dhaka 2016</b></a>
+						<a href="/shows">February 01, 2017&nbsp;&nbsp;-&nbsp;&nbsp;<b>Porno Bilap, Dhaka 2016</b></a>
 					</li>
 					<li>
-						<a href="shows.html">December 01, 2017&nbsp;&nbsp;-&nbsp;&nbsp;<b>Mugdho, Comilla 2017</b></a>
+						<a href="/shows">December 01, 2017&nbsp;&nbsp;-&nbsp;&nbsp;<b>Mugdho, Comilla 2017</b></a>
 					</li>
 					<li>
-						<a href="shows.html">June , 2018&nbsp;&nbsp;-&nbsp;&nbsp;<b>Bivor, Bangladesh 2018</b></a>
+						<a href="/shows">June , 2018&nbsp;&nbsp;-&nbsp;&nbsp;<b>Bivor, Bangladesh 2018</b></a>
 					</li>
 					<li>
-						<a href="shows.html">July 15, 2019&nbsp;&nbsp;-&nbsp;&nbsp;<b>Room no 607, China 2019</b></a>
+						<a href="/shows">July 15, 2019&nbsp;&nbsp;-&nbsp;&nbsp;<b>Room no 607, China 2019</b></a>
 					</li>
 				</ul>
 			</div>
@@ -82,7 +81,7 @@
 	</div>
 	<div id="footer">
 		<p>
-			&copy;Copyright 2019. <a href="index.html">House Collapus</a> all rights reserved
+			&copy;Copyright 2019. <a href="/">House Collapus</a> all rights reserved
 		</p>
 	</div>
 </body>

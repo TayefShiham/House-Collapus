@@ -1,0 +1,96 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Blog - House Collapus</title>
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+</head>
+
+<body>
+    <div id="header" style="width: 987px !important;">
+        <div class="header" style="margin: 5% -1%;padding:0px 0px;">
+            <ul>
+                <li>
+                    <a href="/">home</a>
+                </li>
+                <li>
+                    <a href="/">about</a>
+                </li>
+                <li class="selected">
+                    <a href="/blog">blog</a>
+                </li>
+                <li>
+                    <a href="/shows">shows</a>
+                </li>
+                <li>
+                    <a href="/users/register">Registration</a>
+                </li>
+                <li>
+                    <a href="/users/login">Login</a>
+                </li>
+            </ul>
+
+        </div>
+        <div class="body">
+        </div>
+        <div class="footer">
+        </div>
+    </div>
+    <div id="body">
+        <div class="content">
+            <h2>Films Nowadays</h2>
+            <div>
+                <h1 style="text-align: center;color:white"></h1>
+                <% blog.forEach(function(blog){ %>
+                <h2 > <%= blog.blogTitle %> </h2>
+                <p style="margin-bottom: 30px;"> <%= blog.blog %></p>
+                <% }); %>
+            </div>
+            <div class="paging">
+                <ul>
+                </ul>
+            </div>
+        </div>
+        <div class="sidebar">
+            <div>
+                <h3>VIDEO DOWNLOAD</h3>
+                <ul>
+                    <li>
+                        <a href="/shows">July 12, 2016&nbsp;&nbsp;-&nbsp;&nbsp;<b>31st Show, Bangladesh 2015</b></a>
+                    </li>
+                    <li>
+                        <a href="/shows">February 01, 2017&nbsp;&nbsp;-&nbsp;&nbsp;<b>Porno Bilap, Dhaka 2016</b></a>
+                    </li>
+                    <li>
+                        <a href="/shows">December 01, 2017&nbsp;&nbsp;-&nbsp;&nbsp;<b>Mugdho, Comilla 2017</b></a>
+                    </li>
+                    <li>
+                        <a href="/shows">June , 2018&nbsp;&nbsp;-&nbsp;&nbsp;<b>Bivor, Bangladesh 2018</b></a>
+                    </li>
+                    <li>
+                        <a href="/shows">July 15, 2019&nbsp;&nbsp;-&nbsp;&nbsp;<b>Room no 607, China 2019</b></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="album">
+                <h3>ONLINE RADIO</h3>
+                <a href="https://www.liveonlineradio.net/chinese/beijing-news-radio.htm"><img src="images/album.jpg"
+                        alt=""></a> <span>LIVE STREAM RADIO CHANNEL</span>
+            </div>
+            <div class="connect">
+                <h3>social</h3>
+                <a href="collapus.entertainment@gmail.com" id="googleplus">googleplus</a>
+                <a href="@CollapusEnt" id="facebook">facebook</a>
+                <a href="collapus.entertainment@gmail.com" id="twitter">twitter</a>
+            </div>
+        </div>
+    </div>
+    <div id="footer">
+        <p>
+            &copy;Copyright 2019. <a href="/">House Collapus</a> all rights reserved
+        </p>
+    </div>
+</body>
+
+</html>
